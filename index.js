@@ -29,7 +29,7 @@ app.use(route);
 
 
 
-port=1111||process.env.PORT;
+port=process.env.PORT||1111;
 app.listen(port,()=>{
   console.log("Running at 1111");
 })
