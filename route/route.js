@@ -1,8 +1,6 @@
 const route=require('express').Router();
 const user=require('../schema/user.js')
-route.get('/',function(req,res){
-  res.send('hello');
-})
+
 
 
 route.post('/usersignup',(req,res)=>{
@@ -30,9 +28,19 @@ route.post('/usersignup',(req,res)=>{
  })
 })
 
-route.get('/ch',function(req,res){
-  res.render('index')
+route.get('/home.html',function(req,res){
+  res.render('home')
 })
 
+route.get('/',function(req,res){
+  res.render('home')
+})
+route.get('/team.html',(req,res)=>{
+  res.render('team')
+})
+
+route.get('/highlights.html',(req,res)=>{
+  res.render('highlights')
+})
 
 module.exports=route
